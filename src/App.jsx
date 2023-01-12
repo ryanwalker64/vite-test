@@ -1,9 +1,13 @@
 import { useReducer, useState } from 'react'
+import "inter-ui/inter.css";
 import { nanoid } from 'nanoid'
-import NoteContainer from './components/NotesContainer'
+// import NoteContainer from './components/NotesContainer'
 import NoteCreationForm from './components/NoteCreationForm'
+import NotesList from './components/NotesList'
 import notesReducer from './tools/NoteTools'
+import Note from './components/Note'
 import './App.css'
+
 
 
 function App() {
@@ -12,9 +16,11 @@ function App() {
   const addNote = (note) => dispatch({type: 'ADD_NOTE', data: note})
 
   return (
-    <div className="App">
-      <NoteContainer notes={state}/>
-      <NoteCreationForm addNote={addNote}/>
+    <div className='Apps'>
+      {/* <NoteContainer notes={state}/> */}
+      {/* <Note data={state[0]}/> */}
+      <NotesList notes={state}/> 
+      {/* <NoteCreationForm addNote={addNote}/> */}
     </div>
   )
 }

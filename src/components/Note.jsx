@@ -6,10 +6,9 @@ export default function Note({data}) {
 
     return (
       <div className="note-container">
-        <p className="note-info"> {`${lastEditedDate} – Ryan Walker`}
-        </p>
         <h2>{data.title}</h2>
-        <p>{data.note}</p>
+        <p className="note-info"> {`${lastEditedDate} – Ryan Walker`}</p>
+        <p >{data.note}</p>
       </div>
     )
   }
